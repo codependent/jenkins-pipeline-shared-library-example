@@ -12,7 +12,6 @@ def call(List<String> mavenGoals){
         steps {
           echo 'Building application'
           script {
-          	echo mavenGoals
             def utils = new Utils()
             utils.hello 'Codependent'
           }
