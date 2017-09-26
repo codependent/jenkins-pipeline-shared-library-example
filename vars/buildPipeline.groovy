@@ -1,7 +1,7 @@
 import com.codependent.jenkins.pipelines.Utils
 
 def call(List<String> mavenGoals){
-  def processedMavenGoals = mavenGoals.join(' ')
+  def processedMavenGoals = mavenGoals.join ' '
   pipeline {
     agent any
     tools { 
