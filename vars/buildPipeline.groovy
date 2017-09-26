@@ -1,4 +1,3 @@
-@Library('jenkins-pipeline-shared-library-example')
 import com.codependent.jenkins.pipelines.Utils
 
 def call(String [] mavenGoals){
