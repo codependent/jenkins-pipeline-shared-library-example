@@ -1,6 +1,6 @@
 import com.codependent.jenkins.pipelines.Utils
 
-def call(String [] mavenGoals){
+def call(Object mavenGoals){
   pipeline {
     agent any
     tools { 
