@@ -1,6 +1,6 @@
 import com.codependent.jenkins.pipelines.Utils
 
-def call(Object mavenGoals){
+def call(List<String> mavenGoals){
   pipeline {
     agent any
     tools { 
@@ -20,7 +20,7 @@ def call(Object mavenGoals){
              echo "PATH = ${PATH}"
              echo "M2_HOME = ${M2_HOME}"
              ''' 
-          sh 'mvn -Dmaven.test.failure.ignore=true clean install -U'
+          sh 'mvn -Dmaven.test.failure.ignore=true $mavenGoals -U'
         }
       }
       stage ('Finish') {
