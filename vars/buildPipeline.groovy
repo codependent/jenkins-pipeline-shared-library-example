@@ -1,8 +1,7 @@
-def call(String [] mavenGoals){
-	
-  @Library('jenkins-pipeline-shared-library-example')
-  import com.codependent.jenkins.pipelines.Utils
+@Library('jenkins-pipeline-shared-library-example')
+import com.codependent.jenkins.pipelines.Utils
 
+def call(String [] mavenGoals){
   pipeline {
     agent any
     tools { 
