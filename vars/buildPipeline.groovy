@@ -20,7 +20,7 @@ def call(List<String> mavenGoals){
              echo "PATH = ${PATH}"
              echo "M2_HOME = ${M2_HOME}"
              ''' 
-          sh "mvn -Dmaven.test.failure.ignore=true $processedMavenGoals -DskipTests -U"
+          sh "mvn -Dmaven.test.failure.ignore=true $processedMavenGoals -U"
         }
       }
       stage ('Finish') {
